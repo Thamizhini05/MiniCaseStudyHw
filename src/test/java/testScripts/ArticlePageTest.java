@@ -91,8 +91,9 @@ public class ArticlePageTest {
 		
 		extentTest=extentReports.createTest("Update Article Test");
 		updateArticle.updateArticle("Role of Testing","About Testing","Testing Projects");
-		String name=driver.findElement(By.xpath("//h1[contains(text(),'Role of Testing')]")).getText();
-		 Assert.assertEquals(name,"Role of Testing");
+		String articlename=driver.findElement(By.xpath("//h1[contains(text(),'Role of Testing')]")).getText();
+		System.out.println("Updated article name"+articlename);
+		 Assert.assertEquals(articlename,"Role of Testing");
 	}
 	
 	@Test(priority=4)
