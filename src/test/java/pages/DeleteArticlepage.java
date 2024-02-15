@@ -15,23 +15,16 @@ public class DeleteArticlepage {
 	@FindBy(xpath = "//button[@class='btn btn-sm'][1]")
 	WebElement deleteBtn;
 	
-	
 	public DeleteArticlepage(WebDriver driver)
 	{
 		this.driver=driver;
 		PageFactory.initElements(driver, this);
 		
 	}
-	public void deleteTestArticle()
+	public void deleteArticle()
 	{
 		deleteBtn.click();
-		Alert alert=driver.switchTo().alert();
-		Assert.assertEquals(alert.getText(), "Want to delete the article?");
-		alert.accept();
-		
 		
 	}
 	
-
-
 }

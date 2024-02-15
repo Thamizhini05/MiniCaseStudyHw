@@ -31,16 +31,15 @@ public class NewArticlePage {
 	   public NewArticlePage(WebDriver driver) {
 			PageFactory.initElements(driver,this);
 		}
-	   public void newArticleCreation() {
+	   public void newArticleCreation(String s1,String s2,String s3,String s4) {
 		   createNewArticlebtn.click();
-		   newArticleTitle.sendKeys("Testing in IT");
-		   newArticleAbout.sendKeys("Importance of Testing");
-		   articleTextArea.sendKeys("Testing makes a major role in the IT field");
-		   enterTag.sendKeys("Testing");
+		   newArticleTitle.sendKeys(s1);
+		   newArticleAbout.sendKeys(s2);
+		   articleTextArea.sendKeys(s3);
+		   enterTag.sendKeys(s4);
 		   publishArticlebtn.click();
-		   String tilteHeaderName=titleBtn.getText();
-		   System.out.println("New Article Page Title-"+tilteHeaderName);
-		   Assert.assertEquals(tilteHeaderName,"Testing in IT");
 		 }
 
 }
+
+

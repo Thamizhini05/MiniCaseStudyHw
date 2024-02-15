@@ -26,12 +26,10 @@ public class UpdateArticlePage {
     WebElement enterTags;
      
      @FindBy(xpath="//button[contains(text(),'Update Article')]")
-     WebElement update_btn;
+     WebElement updateBtn;
      
      @FindBy(xpath="(//a[@href='#/'])[2]")
-     WebElement home_btn;
-     
-     
+     WebElement homeBtn;
      
      @FindBy(xpath="//h1[contains(text(),'Role of Testing')]")
      WebElement titleHeaderBtn;
@@ -41,16 +39,17 @@ public class UpdateArticlePage {
      }
  
 	
-	public void updateTestArticle() {
+	public void updateArticle(String s1,String s2,String s3) {
 	         editBtn.click();
 	    	 articleTitle.clear();
-	    	 articleTitle.sendKeys("Role of Testing");
+	    	 articleTitle.sendKeys(s1);
 	    	 articleAbout.clear();
-	    	 articleAbout.sendKeys("About Testing....");
-	    	 update_btn.click();
-	    	 home_btn.click();
-	    	 
-	    	 Assert.assertEquals(titleHeaderBtn.getText(),"Role of Testing");
+	    	 articleAbout.sendKeys(s2);
+	    	 textArea.clear();
+	    	 textArea.sendKeys(s3);
+	    	 updateBtn.click();
 
 }
 }
+
+

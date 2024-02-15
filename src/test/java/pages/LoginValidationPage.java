@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class LoginValidationTest {
+public class LoginValidationPage {
 	@FindBy(xpath="//a[@href='#/login']")
     WebElement loginButton;
     @FindBy(xpath="//input[@name='email']")
@@ -15,15 +15,17 @@ public class LoginValidationTest {
     @FindBy(xpath="//button[contains(text(),'Login')]")
     WebElement loginbtn;
     
-    public LoginValidationTest (WebDriver driver) {
+    public LoginValidationPage (WebDriver driver) {
 		PageFactory.initElements(driver,this);
 	}
-    public void loginTest(String strmail,String strpass) {
+    public void loginTest(String strmail,String strpswd) {
   	 
       loginButton.click();
   	  email.sendKeys(strmail);
-      pswd.sendKeys(strpass);
+      pswd.sendKeys(strpswd);
   	  loginbtn.click();
   	}
 
 }
+
+
