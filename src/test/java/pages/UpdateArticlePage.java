@@ -47,6 +47,7 @@ public class UpdateArticlePage {
 	    	 articleAbout.sendKeys(aboutTheArticle);
 	    	 textArea.clear();
 	    	 textArea.sendKeys(text);
+	    	// updateBtn.click();
 	    	 updateBtn.click();
 
 }

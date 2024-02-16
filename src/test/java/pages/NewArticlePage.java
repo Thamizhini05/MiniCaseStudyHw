@@ -42,6 +42,7 @@ public class NewArticlePage {
 		   newArticleAbout.sendKeys(articleAbout);
 		   articleTextArea.clear();
 		   articleTextArea.sendKeys(textArea);
+		   //enterTag.clear();
 		   enterTag.clear();
 		   enterTag.sendKeys(entertagbtn);
 		   publishArticlebtn.click();

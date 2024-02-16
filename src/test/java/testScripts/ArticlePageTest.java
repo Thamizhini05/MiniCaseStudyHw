@@ -107,7 +107,7 @@ public class ArticlePageTest {
 		updateArticle.updateArticle("Role of Testing","About Testing","Testing Projects");
 		String articlename=driver.findElement(By.xpath("//h1[contains(text(),'Role of Testing')]")).getText();
 		System.out.println("Updated article name"+articlename);
-		System.out.println("Artilce Title Updated");
+		//System.out.println("Artilce Title Updated");
 		 Assert.assertEquals(articlename,"Role of Testing");
 	}
 	

@@ -29,7 +29,8 @@ public class LoginValidationPage {
   	  email.sendKeys(strmail);
   	  pswd.clear();
       pswd.sendKeys(strpswd);
-  	  loginbtn.click();
+  	  //loginbtn.click();
+      loginbtn.click();
   	}
     
     public void invalidLoginTest(String strmail,String strpswd) {
