@@ -122,7 +122,9 @@ public class ArticlePageTest {
 	
 	@AfterMethod
 	  public void teardown(ITestResult result) {
-		  extentTest.assignAuthor("Tester-Thamizhini Athiappan")
+
+	
+		  extentTest.assignAuthor("Tester- Thamizhini ")
 		  .assignCategory("Regression Test")
 		  .assignDevice(System.getProperty("os.name"))
 		  .assignDevice(System.getProperty("os.version"));
