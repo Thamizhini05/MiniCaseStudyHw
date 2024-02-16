@@ -134,6 +134,7 @@ public class ArticlePageTest {
 	}
 	
 	
+	
 	@AfterTest
 	   public void finishExtent() {
 		  extentReports.flush();
