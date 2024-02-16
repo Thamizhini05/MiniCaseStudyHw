@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\thamizh.athiappan\AppData\Local\Temp\testng-eclipse--949806518\testng-customsuite.xml</span>
+                    <span>C:\Users\thamizh.athiappan\AppData\Local\Temp\testng-eclipse-1132233879\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">4 methods,   4 passed</span>
+                    <span class="method-stats">6 methods,   6 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -108,7 +108,12 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="testScripts.ArticlePageTest" class="method navigator-link" hash-for-method="loginTest">loginTest</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="testScripts.ArticlePageTest" class="method navigator-link" hash-for-method="duplicateArticleTest">duplicateArticleTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="testScripts.ArticlePageTest" class="method navigator-link" hash-for-method="invalidloginTest">invalidloginTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -119,6 +124,11 @@
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Default_suite" title="testScripts.ArticlePageTest" class="method navigator-link" hash-for-method="updateTestArticle">updateTestArticle</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="testScripts.ArticlePageTest" class="method navigator-link" hash-for-method="validLoginTest">validLoginTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -148,9 +158,16 @@
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="loginTest">
-                  </a> <!-- loginTest -->
-                  <span class="method-name">loginTest</span>
+                  <a name="duplicateArticleTest">
+                  </a> <!-- duplicateArticleTest -->
+                  <span class="method-name">duplicateArticleTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="invalidloginTest">
+                  </a> <!-- invalidloginTest -->
+                  <span class="method-name">invalidloginTest</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -167,12 +184,19 @@
                   <span class="method-name">updateTestArticle</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="validLoginTest">
+                  </a> <!-- validLoginTest -->
+                  <span class="method-name">validLoginTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Default_suite-class-passed -->
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\thamizh.athiappan\AppData\Local\Temp\testng-eclipse--949806518\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\thamizh.athiappan\AppData\Local\Temp\testng-eclipse-1132233879\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -221,28 +245,36 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(4);
+data.addRows(6);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'newArticleCreation')
+data.setCell(0, 1, 'updateTestArticle')
 data.setCell(0, 2, 'testScripts.ArticlePageTest')
-data.setCell(0, 3, 1421);
+data.setCell(0, 3, 1471);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'updateTestArticle')
+data.setCell(1, 1, 'newArticleCreation')
 data.setCell(1, 2, 'testScripts.ArticlePageTest')
-data.setCell(1, 3, 977);
+data.setCell(1, 3, 1253);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'loginTest')
+data.setCell(2, 1, 'validLoginTest')
 data.setCell(2, 2, 'testScripts.ArticlePageTest')
-data.setCell(2, 3, 675);
+data.setCell(2, 3, 1253);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'deleteTestArticle')
+data.setCell(3, 1, 'duplicateArticleTest')
 data.setCell(3, 2, 'testScripts.ArticlePageTest')
-data.setCell(3, 3, 68);
+data.setCell(3, 3, 941);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'invalidloginTest')
+data.setCell(4, 2, 'testScripts.ArticlePageTest')
+data.setCell(4, 3, 767);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'deleteTestArticle')
+data.setCell(5, 2, 'testScripts.ArticlePageTest')
+data.setCell(5, 3, 682);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 3 seconds</span>
+              <span class="suite-total-time">Total running time: 6 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -275,43 +307,59 @@ return data;
               </div> <!-- configuration-test before -->
               <div class="configuration-test before">
                 <span class="method-name">setupExtent</span>
-                <span class="method-start">1653 ms</span>
+                <span class="method-start">2183 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
-                <span class="method-name">loginTest</span>
-                <span class="method-start">1885 ms</span>
+                <span class="method-name">invalidloginTest</span>
+                <span class="method-start">2474 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">teardown([TestResult name=loginTest status=SUCCESS method=ArticlePageTest.loginTest()[pri:1, instance:testScr...)</span>
-                <span class="method-start">2562 ms</span>
+                <span class="method-name">teardown([TestResult name=invalidloginTest status=SUCCESS method=ArticlePageTest.invalidloginTest()[pri:1, in...)</span>
+                <span class="method-start">3245 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">validLoginTest</span>
+                <span class="method-start">3255 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">teardown([TestResult name=validLoginTest status=SUCCESS method=ArticlePageTest.validLoginTest()[pri:2, instan...)</span>
+                <span class="method-start">4509 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">duplicateArticleTest</span>
+                <span class="method-start">4512 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">teardown([TestResult name=duplicateArticleTest status=SUCCESS method=ArticlePageTest.duplicateArticleTest()[p...)</span>
+                <span class="method-start">5454 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
                 <span class="method-name">newArticleCreation</span>
-                <span class="method-start">2568 ms</span>
+                <span class="method-start">5456 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">teardown([TestResult name=newArticleCreation status=SUCCESS method=ArticlePageTest.newArticleCreation()[pri:2...)</span>
-                <span class="method-start">3991 ms</span>
+                <span class="method-name">teardown([TestResult name=newArticleCreation status=SUCCESS method=ArticlePageTest.newArticleCreation()[pri:4...)</span>
+                <span class="method-start">6710 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
                 <span class="method-name">updateTestArticle</span>
-                <span class="method-start">3992 ms</span>
+                <span class="method-start">6711 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">teardown([TestResult name=updateTestArticle status=SUCCESS method=ArticlePageTest.updateTestArticle()[pri:3, ...)</span>
-                <span class="method-start">4970 ms</span>
+                <span class="method-name">teardown([TestResult name=updateTestArticle status=SUCCESS method=ArticlePageTest.updateTestArticle()[pri:5, ...)</span>
+                <span class="method-start">8184 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
                 <span class="method-name">deleteTestArticle</span>
-                <span class="method-start">4971 ms</span>
+                <span class="method-start">8185 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">teardown([TestResult name=deleteTestArticle status=SUCCESS method=ArticlePageTest.deleteTestArticle()[pri:4, ...)</span>
-                <span class="method-start">5041 ms</span>
+                <span class="method-name">teardown([TestResult name=deleteTestArticle status=SUCCESS method=ArticlePageTest.deleteTestArticle()[pri:6, ...)</span>
+                <span class="method-start">8868 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-test after">
                 <span class="method-name">finishExtent</span>
-                <span class="method-start">5043 ms</span>
+                <span class="method-start">8869 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

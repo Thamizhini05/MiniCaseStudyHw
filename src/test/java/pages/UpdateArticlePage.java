@@ -39,14 +39,14 @@ public class UpdateArticlePage {
      }
  
 	
-	public void updateArticle(String s1,String s2,String s3) {
+	public void updateArticle(String articleHeading,String aboutTheArticle,String text) {
 	         editBtn.click();
 	    	 articleTitle.clear();
-	    	 articleTitle.sendKeys(s1);
+	    	 articleTitle.sendKeys(articleHeading);
 	    	 articleAbout.clear();
-	    	 articleAbout.sendKeys(s2);
+	    	 articleAbout.sendKeys(aboutTheArticle);
 	    	 textArea.clear();
-	    	 textArea.sendKeys(s3);
+	    	 textArea.sendKeys(text);
 	    	 updateBtn.click();
 
 }

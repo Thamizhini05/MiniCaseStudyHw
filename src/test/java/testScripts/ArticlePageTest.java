@@ -68,15 +68,29 @@ public class ArticlePageTest {
 	}
 	
 	@Test(priority=1)
-	public void loginTest() {
-		extentTest=extentReports.createTest("Login Page Test");
-		loginPage.loginTest("thamizhinika.20it@kongu.edu","123tamil");
-		String name=driver.findElement(By.xpath("//div[contains(text(),'Thamizhini Athiappan')]")).getText();
-		Assert.assertEquals(name,"Thamizhini Athiappan");
+	public void invalidloginTest() {
 
+		extentTest=extentReports.createTest("Invalid Login Test");
+		loginPage.invalidLoginTest("thamizhinika.20it@kongu.edu","123tami");
+		Assert.assertEquals(loginPage.checkInValidLogin(),"Wrong email/password combination");
+	}
+	@Test(priority=2)
+	public void validLoginTest() {
+		
+		extentTest=extentReports.createTest("Valid Login Test");
+		loginPage.validLoginTest("thamizhinika.20it@kongu.edu","123tamil");
+		String name=loginPage.checkValidLogin();
+		Assert.assertEquals(name,"Thamizhini Athiappan");
 	}
 	
-	@Test(priority=2)
+	@Test(priority=3)
+	public void duplicateArticleTest() {
+		 extentTest=extentReports.createTest("Duplicate Article Test");
+		newArticlePage.newArticleCreation("Automation Testing","Needs of Automation Testing","Automation Tester","Testing");
+		Assert.assertEquals(newArticlePage.duplicateArticleValidate(),"Title already exists..");
+	}
+	
+	@Test(priority=4)
 	public void newArticleCreation() {
 		
 		extentTest=extentReports.createTest("New Article Test");
@@ -86,7 +100,7 @@ public class ArticlePageTest {
 	    Assert.assertEquals(headerName,"Testing in IT");
 	}
 	
-	@Test(priority=3)
+	@Test(priority=5)
 	public void updateTestArticle() {
 		
 		extentTest=extentReports.createTest("Update Article Test");
@@ -96,19 +110,18 @@ public class ArticlePageTest {
 		 Assert.assertEquals(articlename,"Role of Testing");
 	}
 	
-	@Test(priority=4)
+	@Test(priority=6)
 	public void deleteTestArticle() {
 		extentTest=extentReports.createTest("Delete Article Test");
 		deleteArticle.deleteArticle();
-		Alert alert=driver.switchTo().alert();
-		Assert.assertEquals(alert.getText(), "Want to delete the article?");
-		alert.accept();
+		String element=driver.findElement(By.xpath("//div[contains(text(),'Articles not available.')]")).getText();
+        Assert.assertEquals(element,"Articles not available.");
 
 	}
 	
 	@AfterMethod
 	  public void teardown(ITestResult result) {
-		  extentTest.assignAuthor("AutomationTester1-Priyadharshini")
+		  extentTest.assignAuthor("Tester-Thamizhini Athiappan")
 		  .assignCategory("Regression Test")
 		  .assignDevice(System.getProperty("os.name"))
 		  .assignDevice(System.getProperty("os.version"));

@@ -24,6 +24,8 @@ public class DeleteArticlepage {
 	public void deleteArticle()
 	{
 		deleteBtn.click();
+		Alert alert=driver.switchTo().alert();
+		alert.accept();
 		
 	}
 	

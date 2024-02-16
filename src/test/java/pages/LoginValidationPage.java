@@ -14,17 +14,40 @@ public class LoginValidationPage {
     WebElement pswd;
     @FindBy(xpath="//button[contains(text(),'Login')]")
     WebElement loginbtn;
+    @FindBy(xpath="//div[contains(text(),'Thamizhini Athiappan')]")
+    WebElement validLoginCheck;
+    @FindBy(xpath="//li[contains(text(),'Wrong email/password combination')]")
+    WebElement invalidLoginCheck;
     
     public LoginValidationPage (WebDriver driver) {
 		PageFactory.initElements(driver,this);
 	}
-    public void loginTest(String strmail,String strpswd) {
+    public void validLoginTest(String strmail,String strpswd) {
   	 
-      loginButton.click();
+      //loginButton.click();
+      email.clear();
   	  email.sendKeys(strmail);
+  	  pswd.clear();
       pswd.sendKeys(strpswd);
   	  loginbtn.click();
   	}
+    
+    public void invalidLoginTest(String strmail,String strpswd) {
+     	 
+        loginButton.click();
+    	email.sendKeys(strmail);
+        pswd.sendKeys(strpswd);
+    	loginbtn.click();
+    	}
+    
+     public String checkValidLogin() {
+      	 return validLoginCheck.getText();
+      }
+   
+     public String checkInValidLogin() {
+  	   return invalidLoginCheck.getText();
+     }
+    
 
 }
 

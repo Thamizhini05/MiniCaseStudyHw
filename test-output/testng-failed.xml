@@ -5,12 +5,9 @@
     <classes>
       <class name="testScripts.ArticlePageTest">
         <methods>
-          <include name="deleteTestArticle"/>
+          <include name="invalidloginTest"/>
           <include name="setupExtent"/>
           <include name="teardown"/>
-          <include name="updateTestArticle"/>
-          <include name="newArticleCreation"/>
-          <include name="loginTest"/>
           <include name="finishExtent"/>
           <include name="setup"/>
         </methods>

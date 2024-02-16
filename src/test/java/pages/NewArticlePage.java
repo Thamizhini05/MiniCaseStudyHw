@@ -26,19 +26,34 @@ public class NewArticlePage {
 	    WebElement publishArticlebtn;
 	    
 	    @FindBy(xpath="//h1[contains(text(),'Testing in IT')]")
-	    WebElement titleBtn;
+	    WebElement check;
+	    
+	    @FindBy(xpath="//span[contains(text(),'Title already exists.. ')]")
+	    WebElement duplicate;
 	    
 	   public NewArticlePage(WebDriver driver) {
 			PageFactory.initElements(driver,this);
 		}
-	   public void newArticleCreation(String s1,String s2,String s3,String s4) {
+	   public void newArticleCreation(String newTitle,String articleAbout,String textArea,String entertagbtn) {
 		   createNewArticlebtn.click();
-		   newArticleTitle.sendKeys(s1);
-		   newArticleAbout.sendKeys(s2);
-		   articleTextArea.sendKeys(s3);
-		   enterTag.sendKeys(s4);
+		   newArticleTitle.clear();
+		   newArticleTitle.sendKeys(newTitle);
+		   newArticleAbout.clear();
+		   newArticleAbout.sendKeys(articleAbout);
+		   articleTextArea.clear();
+		   articleTextArea.sendKeys(textArea);
+		   enterTag.clear();
+		   enterTag.sendKeys(entertagbtn);
 		   publishArticlebtn.click();
 		 }
+	   
+	   public String newArticleValidate() {
+			  return  check.getText();
+		   }
+	   
+	   public String duplicateArticleValidate() {
+		   return duplicate.getText();
+	   }
 
 }
 
